@@ -1,0 +1,20 @@
+{
+  "name": "aws-file-upload",
+  "version": "0.1.0",
+  "bin": {
+    "aws-file-upload": "bin/aws-file-upload.js"
+  },
+  "scripts": {
+    "build": "echo \"The build step is not required when using JavaScript!\" && exit 0",
+    "cdk": "cdk",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "aws-cdk": "2.170.0",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.170.0",
+    "constructs": "^10.0.0"
+  }
+}
