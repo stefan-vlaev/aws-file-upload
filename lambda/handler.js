@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 const dynamoDB = new AWS.DynamoDB.DocumentClient();
-const ses = new AWS.SES({ region: 'us-central-1' });
+const ses = new AWS.SES({ region: 'eu-central-1' });
 const moment = require('moment');
 
 // Valid file extensions
@@ -40,7 +40,7 @@ exports.handler = async (event) => {
         };
     }
 
-    // Store metadata in DynamoDB
+    // Metadata DynamoDB
     const metadata = {
         TableName: 'FileMetadata',
         Item: {
@@ -60,7 +60,7 @@ exports.handler = async (event) => {
         };
     }
 
-    // Send email notification via SES
+    // Notification
     try {
         await sendEmailNotification(fileName, fileBuffer.length, fileExtension);
     } catch (error) {
