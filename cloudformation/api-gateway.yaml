@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  FileUploadAPI:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties:
+      Name: 'FileUploadAPI'
+      Description: 'API for file uploads'
+      FailOnWarnings: 'true'
