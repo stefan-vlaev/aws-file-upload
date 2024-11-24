@@ -3,3 +3,18 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+# Node modules
+node_modules/
+
+# AWS CDK build artifacts
+cdk.out/
+
+# IDE files (e.g., VS Code, IntelliJ)
+.vscode/
+
+# MacOS Finder metadata
+.DS_Store
+
+# Lambda dependencies (optional if you are using Lambda layers or external dependencies)
+lambda/node_modules/
+
