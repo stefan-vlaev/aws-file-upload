@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  FileMetadataTable:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      TableName: 'FileMetadata'
+      AttributeDefinitions:
+        - AttributeName: 'fileName'
+          AttributeType: 'S'
+        - AttributeName: 'uploadDate'
+          AttributeType: 'S'
+      KeySchema:
+        - AttributeName: 'fileName'
+          KeyType: 'HASH'
+        - AttributeName: 'uploadDate'
+          KeyType: 'RANGE'
+      ProvisionedThroughput:
+        ReadCapacityUnits: '5'
+        WriteCapacityUnits: '5'
